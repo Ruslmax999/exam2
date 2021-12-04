@@ -1,0 +1,76 @@
+.location {
+  position: relative;
+}
+.map {
+  position: relative;
+  height: 700px;
+  z-index: 1;
+}
+.contact {
+  margin: 0 auto;
+  width: 100%;
+
+  box-shadow: 0px -4px 30px 0px rgba(133, 133, 133, 0.2);
+  z-index: 2;
+  background: #fff;
+  padding:40px 0 20px;
+
+  @media screen and (min-width:$small) {
+    max-width: 63.35%;
+    position: absolute;
+    bottom: -148px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding:61px 0;
+  }
+  @media screen and (max-width:$medium) {
+    padding:60px 0 30px;
+    bottom: -200px;
+  }
+  & address {
+    font:300 18px/55px $book-font;
+    color:  #2c4058;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: flex-start;
+    @media screen and (max-width:$xlarge) {
+      padding-left: 29px;
+    }
+
+    & a {
+      font:300 18px/1.5 $book-font;
+      text-decoration: none;
+      color:  #2c4058;
+
+      &:hover {
+        opacity:0.6;
+      }
+    }
+    & p {
+      margin: 0;
+    }
+    & svg {
+      fill: #7E5AFF;
+    }
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding:0 59px 0 30px;
+  @media screen and (max-width:$medium) {
+    padding: 0;
+  }
+}
+.col-md-6 {
+  max-width: 100%;
+}
+@media only screen and (min-width: 960px) {
+  .col-md-6 {
+    max-width: 100%;
+  }
+}

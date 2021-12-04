@@ -1,0 +1,58 @@
+.footer {
+  position: relative;
+  background: url('../image/scottwebb.jpg') no-repeat 50%;
+  background-size: cover;
+  padding:200px 0 200px ;
+  text-align:center;
+  @media screen and (max-width:$medium) {
+    padding:220px 0 200px;
+  }
+  @media screen and (max-width:$small) {
+    padding:50px 0 50px;
+  }
+  &__bar {
+    display: flex;
+    position: relative;
+    flex-wrap:wrap;
+    z-index: 3;
+    justify-content: space-between;
+    width: 66.66667%;
+    margin: 0 auto;
+    margin-bottom: 42px;
+    @media screen and (max-width:$small) {
+      justify-content: center;
+    }
+  }
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    background: linear-gradient(45deg, rgba(85,183,255,1) 0%, rgba(110,142,254,0.96) 45%, rgba(106,138,255,0.95) 54%, rgba(126,90,255,0.9) 100%);
+  }
+}
+.rights {
+  position: relative;
+  z-index: 3;
+  display:flex;
+  width: 66.66667%;
+  margin: 0 auto;
+  font: 300 14px/1 $book-font;
+
+  & .copyrights {
+    padding-right: 20px;
+
+  }
+  & .author {
+    padding-left: 20px;
+    border-left:1px solid $primary-color;
+    & svg {
+      fill: currentColor;
+    }
+  }
+
+}

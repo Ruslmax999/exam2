@@ -1,0 +1,45 @@
+
+$white: white;
+$black: #000;
+$grey: #5a5a5a;
+$mine-shaft:#232323;
+$dodger-blue: #5474fd;
+$doveGray: rgb(116, 113, 113);
+$indigoCraiola: #5474fd;
+$indigoCraiolaHover: #1c44f8;
+$mineShaft: #333333;
+$masala: rgba(49, 43, 39, 0.9);
+$hoverBeruza: #54dbfd;
+
+
+$container-width: 1110px;
+$default-gap: 15px;
+
+$menuBackground:$dodger-blue;
+
+$font-folder-path: '../fonts/';
+$folder-image: '../image/';
+
+$font-default-name: 'josefinsans';
+$font-second-name: 'aleo';
+
+$follback: Arial, Helvetica, sans-serif;
+
+$font-dafault: $font-default-name,
+$follback;
+
+$default-font-size: 16px;
+$default-font-weight: 300;
+$default-line-height: 1.625; 
+$default-letter-spacing: normal;
+$default-color-text: $white;
+
+$heightElemForms: 60px;
+$widthElemForms: 225px;
+
+
+
+$breack-points: ("xl": 1200px,
+    "lg": 992px,
+    "md": 768px,
+    "sm": 576px);
