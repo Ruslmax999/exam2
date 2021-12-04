@@ -1,462 +1,519 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Architecture</title>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="description" content="Monticello simple and modern" />
     <link rel="icon" href="favicon.png" />
     <link
-            rel="stylesheet"
-            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-<div class="wrap">
-    <div class="overlay">
-    </div>
-    <header class="header">
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="overlay"></div>
+      <header class="header">
         <div class="header-wrap">
-        <div class="container">
+          <div class="container">
             <div class="header-bar">
-                <a href="#" class="logo">
-                    <img src="image/logo.png" alt="logo">
+              <a href="#" class="logo">
+                <img src="image/logo.png" alt="logo" />
+              </a>
+              <ul class="header__nav">
+                <li><a href="#about" data-link="about">about us</a></li>
+                <li><a href="#gallery" data-link="gallery">projects</a></li>
+                <li><a href="#news" data-link="news">news</a></li>
+                <li><a href="#contact" data-link="location">contact</a></li>
+              </ul>
+              <div class="header__socials">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/"
+                  class="socials-circle"
+                >
+                  <svg width="9px" height="16px" class="icon icon-facebook">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg>
                 </a>
-                <ul class="header__nav">
-                    <li><a  href="#about" data-link="about">about us</a></li>
-                    <li><a href="#gallery" data-link="gallery">projects</a></li>
-                    <li><a href="#news" data-link="news">news</a></li>
-                    <li><a href="#contact" data-link="location">contact</a></li>
-                </ul>
-                <div class="header__socials">
-                    <a target="_blank" href="https://www.facebook.com/" class="socials-circle">
-                        <svg width="9px" height="16px" class="icon icon-facebook">
-                            <use xlink:href="#icon-facebook"></use>
-                        </svg>
-                    </a>
-                    <a target="_blank" href="https://www.twitter.com/" class="socials-circle">
-                        <svg width="14px" height="12px" class="icon icon-twitter">
-                            <use xlink:href="#icon-twitter"></use>
-                        </svg>
-                    </a>
-                    <a target="_blank" href="https://www.instagram.com/" class="socials-circle">
-                        <svg width="15px" height="15px" class="icon icon-instagram">
-                            <use xlink:href="#icon-instagram"></use>
-                        </svg>
-                    </a>
-                </div>
-                <a href="#mobile-menu" class="menu-button" ><svg width="25px" height="25px" class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg></a>
+                <a
+                  target="_blank"
+                  href="https://www.twitter.com/"
+                  class="socials-circle"
+                >
+                  <svg width="14px" height="12px" class="icon icon-twitter">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/"
+                  class="socials-circle"
+                >
+                  <svg width="15px" height="15px" class="icon icon-instagram">
+                    <use xlink:href="#icon-instagram"></use>
+                  </svg>
+                </a>
+              </div>
+              <a href="#mobile-menu" class="menu-button">
+                <svg width="25px" height="25px" class="icon icon-menu">
+                  <use xlink:href="#icon-menu"></use>
+                </svg>
+              </a>
             </div>
-        </div>
+          </div>
         </div>
         <div class="swiper-container mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide intro-slide" style="background-image: url('image/bgheader.jpg')">
-                    <div class="sl-container">
-                        <h2 class="swiper-slide__title">
-                            simple & mordern
-                        </h2>
-                        <h3 class="swiper-slide__subtitle">
-                            We make the world's beautiful every day
-                        </h3>
-                    </div>
-                </div>
-                <div class="swiper-slide intro-slide" style="background-image: url('image/bgheader1.jpg')">
-                    <div class="sl-container">
-                        <h2 class="swiper-slide__title">
-                            simple & mordern
-                        </h2>
-                        <h3 class="swiper-slide__subtitle">
-                            We make the world's beautiful every day
-                        </h3>
-                    </div>
-                </div>
-                <div class="swiper-slide intro-slide" style="background-image: url('image/bgheader2.jpg')">
-                    <div class="sl-container">
-                        <h2 class="swiper-slide__title">
-                            simple & mordern
-                        </h2>
-                        <h3 class="swiper-slide__subtitle">
-                            We make the world's beautiful every day
-                        </h3>
-                    </div>
-                </div>
-                <div class="swiper-slide intro-slide" style="background-image: url('image/bgheader3.jpg')">
-                    <div class="sl-container">
-                        <h2 class="swiper-slide__title">
-                            simple & mordern
-                        </h2>
-                        <h3 class="swiper-slide__subtitle">
-                            We make the world's beautiful every day
-                        </h3>
-                    </div>
-                </div>
-                <div class="swiper-slide intro-slide" style="background-image: url('image/bgheader4.jpg')">
-                    <div class="sl-container">
-                        <h2 class="swiper-slide__title">
-                            simple & mordern
-                        </h2>
-                        <h3 class="swiper-slide__subtitle">
-                            We make the world's beautiful every day
-                        </h3>
-                    </div>
-                </div>
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide intro-slide"
+              style="background-image: url('image/bgheader.jpg')"
+            >
+              <div class="sl-container">
+                <h2 class="swiper-slide__title">simple & mordern</h2>
+                <h3 class="swiper-slide__subtitle">
+                  We make the world's beautiful every day
+                </h3>
+              </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div
+              class="swiper-slide intro-slide"
+              style="background-image: url('image/bgheader1.jpg')"
+            >
+              <div class="sl-container">
+                <h2 class="swiper-slide__title">simple & mordern</h2>
+                <h3 class="swiper-slide__subtitle">
+                  We make the world's beautiful every day
+                </h3>
+              </div>
+            </div>
+            <div
+              class="swiper-slide intro-slide"
+              style="background-image: url('image/bgheader2.jpg')"
+            >
+              <div class="sl-container">
+                <h2 class="swiper-slide__title">simple & mordern</h2>
+                <h3 class="swiper-slide__subtitle">
+                  We make the world's beautiful every day
+                </h3>
+              </div>
+            </div>
+            <div
+              class="swiper-slide intro-slide"
+              style="background-image: url('image/bgheader3.jpg')"
+            >
+              <div class="sl-container">
+                <h2 class="swiper-slide__title">simple & mordern</h2>
+                <h3 class="swiper-slide__subtitle">
+                  We make the world's beautiful every day
+                </h3>
+              </div>
+            </div>
+            <div
+              class="swiper-slide intro-slide"
+              style="background-image: url('image/bgheader4.jpg')"
+            >
+              <div class="sl-container">
+                <h2 class="swiper-slide__title">simple & mordern</h2>
+                <h3 class="swiper-slide__subtitle">
+                  We make the world's beautiful every day
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
         <div class="scroll">
-            <a href="#about">
-                <img src="image/scroll.png" alt="scroll">
-            </a>
+          <a href="#about">
+            <img src="image/scroll.png" alt="scroll" />
+          </a>
         </div>
         <ul id="mobile-menu" class="nav-mobile">
-            <li>
-                <a class="link-active" href="#about">About us</a>
-            </li>
-            <li>
-                <a href="#gallery">projects</a>
-            </li>
-            <li>
-                <a href="#news">news</a>
-            </li>
-            <li>
-                <a href="#contact">contact</a>
-            </li>
+          <li>
+            <a class="link-active" href="#about">About us</a>
+          </li>
+          <li>
+            <a href="#gallery">projects</a>
+          </li>
+          <li>
+            <a href="#news">news</a>
+          </li>
+          <li>
+            <a href="#contact">contact</a>
+          </li>
         </ul>
-    </header>
-    <main>
+      </header>
+      <main>
         <div class="container">
-            <section id="about" class="what-do section">
-                <h2 class="section-title">What we do</h2>
-                <div class="row">
-                    <div class="col-7 be-back">
-                        <img class="joel" src="image/joel.jpg" alt="joel">
-                    </div>
-                    <div class="col-5 col-5--right">
-                        <h4 class="what-do__suptitle">
-                            one world
-                        </h4>
-                        <h3 class="what-do__title">
-                            trade center
-                        </h3>
-                        <p>
-                            Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are
-                            very powerful.
-                        </p>
-                        <a href="#" class="button button--more">more details</a>
-                        <address>
-                            <svg width="11" height="16" class="icon icon-location2">
-                                <use xlink:href="#icon-location2"></use>
-                            </svg>
-                            New York City, United States - 1776 feet
-                        </address>
-                    </div>
-                </div>
-                <div class="row row--reverse">
-                    <div class="col-5 col-5--left">
-                        <h4 class="what-do__suptitle">
-                            international
-                        </h4>
-                        <h3 class="what-do__title">
-                            commerce centre
-                        </h3>
-                        <p>
-                            Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising
-                            network may help.
-                        </p>
-                        <a href="#" class="button button--more">more details</a>
-                        <address>
-                            <svg width="11" height="16" class="icon icon-location2">
-                                <use xlink:href="#icon-location2"></use>
-                            </svg>
-                            Hong Kong - 1588 Feet
-                        </address>
-                    </div>
-                    <div class="col-7 af-back">
-                        <img class="house" src="image/house.jpg" alt="bilding">
-                    </div>
-                </div>
-            </section>
+          <section id="about" class="what-do section">
+            <h2 class="section-title">What we do</h2>
+            <div class="row">
+              <div class="col-7 be-back">
+                <img class="joel" src="image/joel.jpg" alt="joel" />
+              </div>
+              <div class="col-5 col-5--right">
+                <h4 class="what-do__suptitle">one world</h4>
+                <h3 class="what-do__title">trade center</h3>
+                <p>
+                  Increasing prosperity in our lives can be accomplished by
+                  having the right frame of mind. The truth is, our thoughts are
+                  very powerful.
+                </p>
+                <a href="#" class="button button--more">more details</a>
+                <address>
+                  <svg width="11" height="16" class="icon icon-location2">
+                    <use xlink:href="#icon-location2"></use>
+                  </svg>
+                  New York City, United States - 1776 feet
+                </address>
+              </div>
+            </div>
+            <div class="row row--reverse">
+              <div class="col-5 col-5--left">
+                <h4 class="what-do__suptitle">international</h4>
+                <h3 class="what-do__title">commerce centre</h3>
+                <p>
+                  Successful businesses have many things in common, today we’ll
+                  look at the big ‘R’ of recognition and how a digital
+                  advertising network may help.
+                </p>
+                <a href="#" class="button button--more">more details</a>
+                <address>
+                  <svg width="11" height="16" class="icon icon-location2">
+                    <use xlink:href="#icon-location2"></use>
+                  </svg>
+                  Hong Kong - 1588 Feet
+                </address>
+              </div>
+              <div class="col-7 af-back">
+                <img class="house" src="image/house.jpg" alt="bilding" />
+              </div>
+            </div>
+          </section>
         </div>
         <section id="news" class="news section">
-            <div class="container">
-                <h2 class="section-title section-title--white">
-                    Latest news
-                </h2>
-                <div class="news__slider">
-                    <div class="slide-left">
-                        <svg class="icon icon-cheveron-outline-left">
-                            <use xlink:href="#icon-cheveron-outline-left"></use>
-                        </svg>
+          <div class="container">
+            <h2 class="section-title section-title--white">Latest news</h2>
+            <div class="news__slider">
+              <div class="slide-left">
+                <svg class="icon icon-cheveron-outline-left">
+                  <use xlink:href="#icon-cheveron-outline-left"></use>
+                </svg>
+              </div>
+
+              <div class="slide-right">
+                <svg class="icon icon-cheveron-outline-right">
+                  <use xlink:href="#icon-cheveron-outline-right"></use>
+                </svg>
+              </div>
+
+              <div class="swiper-container mySwiper1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide news__slide">
+                    <div class="news__image">
+                      <img src="image/fillipe.jpg" alt="lauren" />
                     </div>
 
-                    <div class="slide-right">
-                        <svg class="icon icon-cheveron-outline-right">
-                            <use xlink:href="#icon-cheveron-outline-right"></use>
-                        </svg>
+                    <h4 class="slide-title">
+                      Hypnotize yourself into the ghost.
+                    </h4>
+                    <p>
+                      There are many things that are important to catalog design
+                    </p>
+                    <div class="slide-author">
+                      <div class="author-photo">
+                        <img src="image/alice.jpg" alt="isaac" />
+                      </div>
+                      <div class="author-name">
+                        <h5>Alice Ward</h5>
+                        <time datetime="2017-12-30">30 Dec 2017</time>
+                      </div>
                     </div>
-
-                    <div class="swiper-container mySwiper1">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide news__slide">
-                                <div class="news__image"> <img src="image/fillipe.jpg" alt="lauren"></div>
-
-                                <h4 class="slide-title">
-                                    Hypnotize yourself into the ghost.
-                                </h4>
-                                <p>
-                                    There are many things that are important to catalog design
-                                </p>
-                                <div class="slide-author">
-                                    <div class="author-photo">
-                                        <img src="image/alice.jpg" alt="isaac">
-                                    </div>
-                                    <div class="author-name">
-                                        <h5>Alice Ward</h5>
-                                        <time datetime="2017-12-30">30 Dec 2017</time>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide news__slide">
-                                <div class="news__image">
-                                <img src="image/lauren.jpg" alt="lauren">
-                                </div>
-                                <h4 class="slide-title">
-                                    See The Unmatched Beauty Of The Great.
-                                </h4>
-                                <p>
-                                    Free directories: directories are perfect for customers that are... searching for
-                                </p>
-                                <div class="slide-author">
-                                    <div class="author-photo">
-                                        <img src="image/isaac.jpg" alt="isaac">
-                                    </div>
-                                    <div class="author-name">
-                                        <h5>Isaac Dunn</h5>
-                                        <time datetime="2017-02-09">09 Feb 2017</time>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide news__slide">
-                                <div class="news__image">
-                                <img src="image/matthew.jpg" alt="lauren">
-                                </div>
-                                <h4 class="slide-title">
-                                    Effective advertising pointers.
-                                </h4>
-                                <p>
-                                    Having a home based business is a wonderful asset to your life ...
-                                </p>
-                                <div class="slide-author">
-                                    <div class="author-photo">
-                                        <img src="image/dominic.jpg" alt="isaac">
-                                    </div>
-                                    <div class="author-name">
-                                        <h5>Dominic Freeman</h5>
-                                        <time datetime="2017-04-24">24 Apr 2017</time>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide news__slide">
-                                <div class="news__image">
-                                    <img src="image/lauren.jpg" alt="lauren">
-                                </div>
-                                <h4 class="slide-title">
-                                    See The Unmatched Beauty Of The Great.
-                                </h4>
-                                <p>
-                                    Free directories: directories are perfect for customers that are... searching for
-                                </p>
-                                <div class="slide-author">
-                                    <div class="author-photo">
-                                        <img src="image/isaac.jpg" alt="isaac">
-                                    </div>
-                                    <div class="author-name">
-                                        <h5>Isaac Dunn</h5>
-                                        <time datetime="2017-02-09">09 Feb 2017</time>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide news__slide">
-                                <div class="news__image">
-                                    <img src="image/matthew.jpg" alt="lauren">
-                                </div>
-                                <h4 class="slide-title">
-                                    Effective advertising pointers.
-                                </h4>
-                                <p>
-                                    Having a home based business is a wonderful asset to your life ...
-                                </p>
-                                <div class="slide-author">
-                                    <div class="author-photo">
-                                        <img src="image/dominic.jpg" alt="isaac">
-                                    </div>
-                                    <div class="author-name">
-                                        <h5>Dominic Freeman</h5>
-                                        <time datetime="2017-04-24">24 Apr 2017</time>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide news__slide">
-                                <div class="news__image">
-                                    <img src="image/fillipe.jpg" alt="lauren">
-                                </div>
-                                <h4 class="slide-title">
-                                    Hypnotize yourself into the ghost.
-                                </h4>
-                                <p>
-                                    There are many things that are important to catalog design
-                                </p>
-                                <div class="slide-author">
-                                    <div class="author-photo">
-                                        <img src="image/alice.jpg" alt="isaac">
-                                    </div>
-                                    <div class="author-name">
-                                        <h5>Alice Ward</h5>
-                                        <time datetime="2017-12-30">30 Dec 2017</time>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide news__slide">
-                                <div class="news__image">
-                                    <img src="image/matthew.jpg" alt="lauren">
-                                </div>
-                                <h4 class="slide-title">
-                                    Effective advertising pointers.
-                                </h4>
-                                <p>
-                                    Having a home based business is a wonderful asset to your life ...
-                                </p>
-                                <div class="slide-author">
-                                    <div class="author-photo">
-                                        <img src="image/dominic.jpg" alt="isaac">
-                                    </div>
-                                    <div class="author-name">
-                                        <h5>Dominic Freeman</h5>
-                                        <time datetime="2017-04-24">24 Apr 2017</time>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination swiper-pagination--news"></div>
+                  </div>
+                  <div class="swiper-slide news__slide">
+                    <div class="news__image">
+                      <img src="image/lauren.jpg" alt="lauren" />
                     </div>
-
+                    <h4 class="slide-title">
+                      See The Unmatched Beauty Of The Great.
+                    </h4>
+                    <p>
+                      Free directories: directories are perfect for customers
+                      that are... searching for
+                    </p>
+                    <div class="slide-author">
+                      <div class="author-photo">
+                        <img src="image/isaac.jpg" alt="isaac" />
+                      </div>
+                      <div class="author-name">
+                        <h5>Isaac Dunn</h5>
+                        <time datetime="2017-02-09">09 Feb 2017</time>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide news__slide">
+                    <div class="news__image">
+                      <img src="image/matthew.jpg" alt="lauren" />
+                    </div>
+                    <h4 class="slide-title">Effective advertising pointers.</h4>
+                    <p>
+                      Having a home based business is a wonderful asset to your
+                      life ...
+                    </p>
+                    <div class="slide-author">
+                      <div class="author-photo">
+                        <img src="image/dominic.jpg" alt="isaac" />
+                      </div>
+                      <div class="author-name">
+                        <h5>Dominic Freeman</h5>
+                        <time datetime="2017-04-24">24 Apr 2017</time>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide news__slide">
+                    <div class="news__image">
+                      <img src="image/lauren.jpg" alt="lauren" />
+                    </div>
+                    <h4 class="slide-title">
+                      See The Unmatched Beauty Of The Great.
+                    </h4>
+                    <p>
+                      Free directories: directories are perfect for customers
+                      that are... searching for
+                    </p>
+                    <div class="slide-author">
+                      <div class="author-photo">
+                        <img src="image/isaac.jpg" alt="isaac" />
+                      </div>
+                      <div class="author-name">
+                        <h5>Isaac Dunn</h5>
+                        <time datetime="2017-02-09">09 Feb 2017</time>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide news__slide">
+                    <div class="news__image">
+                      <img src="image/matthew.jpg" alt="lauren" />
+                    </div>
+                    <h4 class="slide-title">Effective advertising pointers.</h4>
+                    <p>
+                      Having a home based business is a wonderful asset to your
+                      life ...
+                    </p>
+                    <div class="slide-author">
+                      <div class="author-photo">
+                        <img src="image/dominic.jpg" alt="isaac" />
+                      </div>
+                      <div class="author-name">
+                        <h5>Dominic Freeman</h5>
+                        <time datetime="2017-04-24">24 Apr 2017</time>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide news__slide">
+                    <div class="news__image">
+                      <img src="image/fillipe.jpg" alt="lauren" />
+                    </div>
+                    <h4 class="slide-title">
+                      Hypnotize yourself into the ghost.
+                    </h4>
+                    <p>
+                      There are many things that are important to catalog design
+                    </p>
+                    <div class="slide-author">
+                      <div class="author-photo">
+                        <img src="image/alice.jpg" alt="isaac" />
+                      </div>
+                      <div class="author-name">
+                        <h5>Alice Ward</h5>
+                        <time datetime="2017-12-30">30 Dec 2017</time>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide news__slide">
+                    <div class="news__image">
+                      <img src="image/matthew.jpg" alt="lauren" />
+                    </div>
+                    <h4 class="slide-title">Effective advertising pointers.</h4>
+                    <p>
+                      Having a home based business is a wonderful asset to your
+                      life ...
+                    </p>
+                    <div class="slide-author">
+                      <div class="author-photo">
+                        <img src="image/dominic.jpg" alt="isaac" />
+                      </div>
+                      <div class="author-name">
+                        <h5>Dominic Freeman</h5>
+                        <time datetime="2017-04-24">24 Apr 2017</time>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="swiper-pagination swiper-pagination--news"></div>
+              </div>
             </div>
+          </div>
         </section>
         <section id="gallery" class="gallery section">
-            <div class="container">
-                <h2 class="section-title section-title--gallery">
-                    gallery
-                </h2>
-                <div class="row row--gallery">
-                    <div class="col-gallery">
-                        <div class="gallery__image">
-                            <a href="image/scottwebb.jpg" data-lightbox="roadtrip"><img src="image/scottwebb.jpg"  alt="scott"></a>
-                        </div>
-                    </div>
-                    <div class="col-gallery">
-                        <div class="gallery__images">
-                            <a href="image/first.jpg"  data-lightbox="roadtrip"><img src="image/first.jpg" alt="first"></a>
-                            <a href="image/second.jpg"  data-lightbox="roadtrip"><img src="image/second.jpg" data-lightbox="roadtrip" alt="second"></a>
-                            <a href="image/third.jpg"  data-lightbox="roadtrip"><img src="image/third.jpg" data-lightbox="roadtrip" alt="third"></a>
-                            <a href="image/fourth.jpg"  data-lightbox="roadtrip"><img src="image/fourth.jpg" data-lightbox="roadtrip" alt="fourth"></a>
-
-                        </div>
-                    </div>
+          <div class="container">
+            <h2 class="section-title section-title--gallery">gallery</h2>
+            <div class="row row--gallery">
+              <div class="col-gallery">
+                <div class="gallery__image">
+                  <a href="image/scottwebb.jpg" data-lightbox="roadtrip"
+                    ><img src="image/scottwebb.jpg" alt="scott"
+                  /></a>
                 </div>
-                <a href="#" class="button gallery-button">see more</a>
+              </div>
+              <div class="col-gallery">
+                <div class="gallery__images">
+                  <a href="image/first.jpg" data-lightbox="roadtrip"
+                    ><img src="image/first.jpg" alt="first"
+                  /></a>
+                  <a href="image/second.jpg" data-lightbox="roadtrip"
+                    ><img
+                      src="image/second.jpg"
+                      data-lightbox="roadtrip"
+                      alt="second"
+                  /></a>
+                  <a href="image/third.jpg" data-lightbox="roadtrip"
+                    ><img
+                      src="image/third.jpg"
+                      data-lightbox="roadtrip"
+                      alt="third"
+                  /></a>
+                  <a href="image/fourth.jpg" data-lightbox="roadtrip"
+                    ><img
+                      src="image/fourth.jpg"
+                      data-lightbox="roadtrip"
+                      alt="fourth"
+                  /></a>
+                </div>
+              </div>
             </div>
+            <a href="#" class="button gallery-button">see more</a>
+          </div>
         </section>
         <section id="location" class="location">
-            <div id="map" class="map"></div>
-            <div class="container">
-                <div id="contact" class="contact">
-                    <h2 class="section-title section-title--contact">
-                        get in touch
-                    </h2>
-                    <div class="row row--contact">
-                        <div class="col-6 col-md-6">
-                            <address>
-                                <p>
-                                    <svg width="14px" height="16px" class="icon icon-location">
-                                        <use xlink:href="#icon-location"></use>
-                                    </svg> 91 Nolan Extensions Suite 670</p>
-                                <a href="tel:+0013568682454">
-                                    <svg width="14px" height="16px" class="icon icon-phone">
-                                        <use xlink:href="#icon-phone"></use>
-                                    </svg> +001 356-868-2454</a>
-                                <a href="mailto:username@mail.com">
-                                    <svg width="14px" height="16px" class="icon icon-envelope">
-                                        <use xlink:href="#icon-envelope"></use>
-                                    </svg> gahuy93@gmail.com
-                                </a>
+          <div id="map" class="map"></div>
+          <div class="container">
+            <div id="contact" class="contact">
+              <h2 class="section-title section-title--contact">get in touch</h2>
+              <div class="row row--contact">
+                <div class="col-6 col-md-6">
+                  <address>
+                    <p>
+                      <svg
+                        width="14px"
+                        height="16px"
+                        class="icon icon-location"
+                      >
+                        <use xlink:href="#icon-location"></use>
+                      </svg>
+                      91 Nolan Extensions Suite 670
+                    </p>
+                    <a href="tel:+0013568682454">
+                      <svg width="14px" height="16px" class="icon icon-phone">
+                        <use xlink:href="#icon-phone"></use>
+                      </svg>
+                      +001 356-868-2454</a
+                    >
+                    <a href="mailto:username@mail.com">
+                      <svg
+                        width="14px"
+                        height="16px"
+                        class="icon icon-envelope"
+                      >
+                        <use xlink:href="#icon-envelope"></use>
+                      </svg>
+                      gahuy93@gmail.com
+                    </a>
 
-                                <p class="contact__subtitle">
-                                    <svg width="14px" height="16px" class="icon icon-time">
-                                        <use xlink:href="#icon-time"></use>
-                                    </svg> From 07:05AM to 19:30PM</p>
-                            </address>
-                        </div>
-                        <div class="col-6 col-md-6">
-                            <form class="form">
-                                <input type="text" required placeholder="Molie Medina">
-                                <input type="email" required placeholder="Email">
-                                <button class="button" type="submit">submit</button>
-                            </form>
-                        </div>
-                    </div>
+                    <p class="contact__subtitle">
+                      <svg width="14px" height="16px" class="icon icon-time">
+                        <use xlink:href="#icon-time"></use>
+                      </svg>
+                      From 07:05AM to 19:30PM
+                    </p>
+                  </address>
                 </div>
+                <div class="col-6 col-md-6">
+                  <form class="form">
+                    <input type="text" required placeholder="Molie Medina" />
+                    <input type="email" required placeholder="Email" />
+                    <button class="button" type="submit">submit</button>
+                  </form>
+                </div>
+              </div>
             </div>
+          </div>
         </section>
-    </main>
-    <footer class="footer">
+      </main>
+      <footer class="footer">
         <div class="container">
-            <div class="footer__bar">
-                <a href="#" class="logo">
-                    <img src="image/Logo.png" alt="logo">
-                </a>
-                <div class="header__socials">
-                    <a target="_blank" href="https://www.facebook.com/" class="socials-circle">
-                        <svg width="9px" height="16px" class="icon icon-facebook">
-                            <use xlink:href="#icon-facebook"></use>
-                        </svg>
-                    </a>
-                    <a target="_blank" href="https://www.twitter.com/" class="socials-circle">
-                        <svg width="14px" height="12px" class="icon icon-twitter">
-                            <use xlink:href="#icon-twitter"></use>
-                        </svg>
-                    </a>
-                    <a target="_blank" href="https://www.instagram.com/" class="socials-circle">
-                        <svg width="15px" height="15px" class="icon icon-instagram">
-                            <use xlink:href="#icon-instagram"></use>
-                        </svg>
-                    </a>
-                </div>
+          <div class="footer__bar">
+            <a href="#" class="logo">
+              <img src="image/Logo.png" alt="logo" />
+            </a>
+            <div class="header__socials">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/"
+                class="socials-circle"
+              >
+                <svg width="9px" height="16px" class="icon icon-facebook">
+                  <use xlink:href="#icon-facebook"></use>
+                </svg>
+              </a>
+              <a
+                target="_blank"
+                href="https://www.twitter.com/"
+                class="socials-circle"
+              >
+                <svg width="14px" height="12px" class="icon icon-twitter">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg>
+              </a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/"
+                class="socials-circle"
+              >
+                <svg width="15px" height="15px" class="icon icon-instagram">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg>
+              </a>
             </div>
-            <div class="rights">
-                <div class="copyrights">
-                    Copyrights © 2021 Monticello
-                </div>
-                <div class="author">
-                    Made with <svg width="14" height="14" class="icon icon-heart"><use xlink:href="#icon-heart"></use></svg> by Ga Huy
-                </div>
+          </div>
+          <div class="rights">
+            <div class="copyrights">Copyrights © 2021 Monticello</div>
+            <div class="author">
+              Made with
+              <svg width="14" height="14" class="icon icon-heart">
+                <use xlink:href="#icon-heart"></use>
+              </svg>
+              by Ga Huy
             </div>
+          </div>
         </div>
-    </footer>
-</div>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="js/script.js"></script>
-<!--<script src="js/map/map.js"></script>-->
-<!--<script src="js/app.js"></script>-->
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd2T5kq2eY7-w0dk65xWAULyH83_DNPNI&callback=initMap" async defer></script>
-
-!--	<svg class="hide">-->
+      </footer>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd2T5kq2eY7-w0dk65xWAULyH83_DNPNI&callback=initMap"
+      async
+      defer
+    ></script>
+    <!-- <svg class="hide">
     		<defs>
     			<symbol id="icon-location" viewBox="0 0 32 32">
     				<title>location</title>
@@ -522,6 +579,6 @@
     							<path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
     							</symbol>
     		</defs>
-</svg>
-</body>
+</svg> -->
+  </body>
 </html>
