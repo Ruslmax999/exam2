@@ -4,67 +4,61 @@ $small: 640px;
 $medium: 960px;
 $large: 1024px;
 $xlarge: 1200px;
-$awesome-font:'font_awesome', sans-serif;
-$book-font:'gotham_book' , sans-serif;
-$bolt-font: 'gotham_bolt' , sans-serif;
-$medium-font:'gotham_medium' , sans-serif;
-$primary-font:'Open Sans', sans-serif;
-$primary-color:#fff;
-$text-color:  rgba(74, 85, 98, 0.5);
+$awesome-font: "font_awesome", sans-serif;
+$book-font: "gotham_book", sans-serif;
+$bolt-font: "gotham_bolt", sans-serif;
+$medium-font: "gotham_medium", sans-serif;
+$primary-font: "Open Sans", sans-serif;
+$primary-color: #fff;
+$text-color: rgba(74, 85, 98, 0.5);
 
-
-body{
-    font:normal 18px/1.6 $primary-font;
-    color: $primary-color;
-    @media screen and (max-width:$medium) {
-        font-size: 16px;
-    }
-    @media screen and (max-width:$small) {
-        font-size: 14px;
-    }
+body {
+  font: normal 18px/1.6 $primary-font;
+  color: $primary-color;
+  @media screen and (max-width: $medium) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $small) {
+    font-size: 14px;
+  }
 }
 .container {
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 1210px;
-    position: relative;
-    margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1210px;
+  position: relative;
+  margin: 0 auto;
 }
 
 a,
 input[type="submit"],
 input[type="button"],
-button{
-    -webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-    -moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-    transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+button {
+  -webkit-transition: color 0.3s ease-in, border-color 0.3s ease-in,
+    background-color 0.3s ease-in, opacity 0.3s ease-in;
+  -moz-transition: color 0.3s ease-in, border-color 0.3s ease-in,
+    background-color 0.3s ease-in, opacity 0.3s ease-in;
+  transition: color 0.3s ease-in, border-color 0.3s ease-in,
+    background-color 0.3s ease-in, opacity 0.3s ease-in;
 }
 input[type="submit"],
 input[type="button"],
 button,
-.button{
-    display: inline-block;
-    font:300 14px/51px $book-font;
-    color:  #2c4058;
-    text-decoration:none;
-    text-transform: uppercase;
-    border:1px solid #2c4058;
-    padding:0 40px;
+.button {
+  display: inline-block;
+  font: 300 14px/51px $book-font;
+  color: #2c4058;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #2c4058;
+  padding: 0 40px;
 
-    &:hover , &:active {
-
-        background: #2c4058;
-        color:#fff;
-    }
+  &:hover,
+  &:active {
+    background: #2c4058;
+    color: #fff;
+  }
 }
-
-input[type="submit"]:hover,
-input[type="button"]:hover,
-button:hover,
-.button:hover{
-
-}
-
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -72,54 +66,28 @@ input[type="number"],
 input[type="tel"],
 textarea,
 select {
-    font:300 18px/50px $book-font;
-    color:  #2c4058;
-    border:none;
-    border-bottom:1px solid #2c4058;
-    width: 100%;
-    margin-bottom: 33px;
-    opacity: 0.3;
-    -webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-    -moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-    transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-    outline: none;
-    @media screen and (max-width:$medium) {
-        margin-bottom: 25px;
-        line-height: 30px;
-    }
-    &:focus {
-        opacity: 1;
-    }
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-textarea:focus,
-select:focus {
-
-}
-textarea {
-
+  font: 300 18px/50px $book-font;
+  color: #2c4058;
+  border: none;
+  border-bottom: 1px solid #2c4058;
+  width: 100%;
+  margin-bottom: 33px;
+  opacity: 0.3;
+  -webkit-transition: color 0.3s ease-in, border-color 0.3s ease-in,
+    background-color 0.3s ease-in, opacity 0.3s ease-in;
+  -moz-transition: color 0.3s ease-in, border-color 0.3s ease-in,
+    background-color 0.3s ease-in, opacity 0.3s ease-in;
+  transition: color 0.3s ease-in, border-color 0.3s ease-in,
+    background-color 0.3s ease-in, opacity 0.3s ease-in;
+  outline: none;
+  @media screen and (max-width: $medium) {
+    margin-bottom: 25px;
+    line-height: 30px;
+  }
+  &:focus {
+    opacity: 1;
+  }
 }
 .hide {
-    display:none;
+  display: none;
 }
-.overlay {
-    opacity: 0;
-    visibility: hidden;
-    &.overlay-open {
-        visibility: visible;
-        opacity: 1;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 6;
-        background-color: rgba(#7467F8,0.6);
-    }
-}
-

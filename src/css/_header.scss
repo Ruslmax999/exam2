@@ -1,54 +1,91 @@
 .header {
-  position: relative;
+  &__navigation {
+    @media screen and (max-width: $medium) {
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      right: -120%;
+      transition: 0.4s;
+    }
+  }
+  &__navigation.active {
+    right: 0;
+  }
+
   &__nav {
     list-style: none;
-    display:flex;
-    margin-left: -98px;
-    margin-bottom: 10px;
-    @media screen and (max-width:$medium) {
-      display: none;
+    display: flex;
+    @media screen and (max-width: $medium) {
+      order: 3;
+      flex-direction: column;
+      margin-left: 0;
+      margin-bottom: 0;
     }
     & li {
-      padding-left: 23px;
-      margin-left: 67px;
-      @media screen and (max-width:$large) {
-        padding-left: 20px;
+      font: 300 14px/1 $book-font;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      @media screen and (max-width: $large) {
+        padding-left: 15px;
+        padding: 10px;
       }
-      @media screen and (max-width:$large) {
-        padding-left: 5px;
+      @media screen and (max-width: $medium) {
+        background-color: #337aff;
+        margin-left: 0;
+        text-align: center;
+        border: 1px solid #fff;
+        border-radius: 15px;
       }
       & a {
-        font:300 14px/1 $book-font;
-        text-decoration: none;
+        display: block;
         color: $primary-color;
-        text-transform:uppercase;
+        text-decoration: none;
         position: relative;
+        @media screen and (max-width: $medium) {
+          padding: 20px;
+        }
         &:before {
-          content: '';
+          content: "";
           position: absolute;
           width: 9px;
           height: 9px;
-          border:1px solid $primary-color;
+          border: 1px solid $primary-color;
           border-radius: 50%;
           top: 50%;
-          left: -20px;
+          left: -24px;
           transform: translateY(-50%);
           transition: 1s;
+          @media screen and (max-width: $medium) {
+            display: none;
+          }
         }
-        &:hover , &:active, &.link-active {
+        &:hover,
+        &:active,
+        &.link-active {
           &:before {
             background: $primary-color;
           }
         }
-
-
+      }
+    }
+    & li:not(:first-child) {
+      padding-left: 90px;
+      @media screen and (max-width: 1050px) {
+        padding-left: 50px;
+      }
+      @media screen and (max-width: $medium) {
+        padding-left: 0;
       }
     }
   }
   &__socials {
-    display:flex;
+    display: flex;
     margin-left: -20px;
-    @media screen and (max-width:$small) {
+    @media screen and (max-width: $medium) {
+      order: -1;
+    }
+    @media screen and (max-width: $small) {
       display: none;
     }
     .socials-circle {
@@ -56,58 +93,29 @@
       height: 40px;
       border: 1px solid $primary-color;
       border-radius: 50%;
-      display:flex;
+      display: flex;
       align-items: center;
       justify-content: center;
-      color:$primary-color;
+      color: $primary-color;
       text-decoration: none;
       margin-left: 20px;
       &:hover {
         opacity: 0.5;
       }
       & svg {
-        fill:$primary-color;
+        fill: $primary-color;
       }
     }
   }
 }
-.menu-button{
-  fill:#fff;
+.menu-button {
+  fill: #fff;
   padding-right: 10%;
-  display:none;
-  @media screen and (max-width:$medium) {
+  display: none;
+  @media screen and (max-width: $medium) {
     display: block;
+    height: 100%;
   }
-}
-.nav-mobile {
-  display:flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #7467F8;
-  margin: 0;
-  padding: 0;
-  z-index: 13;
-  list-style:none;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
-  & li {
-    border-bottom:1px solid #fff;
-    line-height: 55px;
-    padding:10px 50px;
-  }
-  & a {
-    font:300 14px/1 $book-font;
-    text-decoration: none;
-    color: $primary-color;
-    text-transform:uppercase;
-  }
-}
-.open {
-  opacity: 1;
-  visibility: visible;
 }
 .header-wrap {
   position: absolute;
@@ -124,14 +132,25 @@
 }
 
 .header-bar {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:53px 0 0 0;
-  .logo {
-    flex-shrink: 0;
+  padding: 53px 0 0 0;
+  position: relative;
+}
+.logo {
+  flex-shrink: 0;
+  order: -2;
+  @media screen and (max-width: $medium) {
+    display: inline-block;
   }
 }
+@media screen and (max-width: $medium) {
+  .logo img {
+    max-width: 200px;
+  }
+}
+
 .swiper-container {
   overflow: hidden;
   width: 100%;
@@ -145,7 +164,7 @@
   left: auto;
   width: auto;
   transform: translateY(-50%);
-  @media screen and (max-width:$large) {
+  @media screen and (max-width: $large) {
     transform: rotate(90deg);
     right: 50%;
     top: auto;
@@ -153,7 +172,7 @@
     width: auto;
   }
   .swiper-pagination-bullet {
-    margin:  40px 0;
+    margin: 40px 0;
     display: block;
     width: 10px;
     height: 10px;
@@ -162,7 +181,7 @@
     opacity: 1;
   }
   .swiper-pagination-bullet-active {
-    background:white;
+    background: white;
     color: #ffffff;
     opacity: 1;
   }
@@ -174,27 +193,35 @@
   background-position: 50% 50%;
   z-index: 1;
   &.intro-slide:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(85,183,255,0.8) 0%, rgba(110,142,254,0.8) 45%, rgba(106,138,255,0.8) 54%, rgba(126,90,255,0.8) 100%);
+    background: linear-gradient(
+      45deg,
+      rgba(85, 183, 255, 0.8) 0%,
+      rgba(110, 142, 254, 0.8) 45%,
+      rgba(106, 138, 255, 0.8) 54%,
+      rgba(126, 90, 255, 0.8) 100%
+    );
   }
   &__title {
     position: relative;
     z-index: 2;
     color: $primary-color;
+    font-family: $book-font;
     font-size: 80px;
     font-weight: 700;
     text-transform: uppercase;
     margin: 22px 0 0 12px;
-    letter-spacing: 0.1em;
-    @media screen and (max-width:$medium) {
-      font-size: 60px;
+    letter-spacing: 0.05em;
+    @media screen and (max-width: $medium) {
+      font-size: 54px;
+      margin: 0;
     }
-    @media screen and (max-width:$small) {
+    @media screen and (max-width: $small) {
       font-size: 30px;
       text-align: center;
     }
@@ -202,14 +229,15 @@
   &__subtitle {
     position: relative;
     z-index: 2;
+    font-family: $book-font;
     font-size: 18px;
     font-weight: 300;
-    letter-spacing: 0.38em;
-    text-transform:uppercase;
-    @media screen and (max-width:$medium) {
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    @media screen and (max-width: $medium) {
       font-size: 14px;
     }
-    @media screen and (max-width:$small) {
+    @media screen and (max-width: $small) {
       font-size: 10px;
       padding: 10px;
       text-align: center;
@@ -229,8 +257,8 @@
   left: 50%;
   bottom: 40px;
   transform: translateX(-50%);
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   &:hover {
-    transform: translate(-50%,-10px);
+    transform: translate(-50%, -10px);
   }
 }

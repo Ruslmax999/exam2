@@ -1,5 +1,5 @@
 import lightbox from "lightbox2";
-import "./map/map.js";
+// import "./map/map.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   lightbox.option({
@@ -48,40 +48,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Smooth scroll
-  $('a[href*="#"]')
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function (event) {
-      if (
-        location.pathname.replace(/^\//, "") ==
-          this.pathname.replace(/^\//, "") &&
-        location.hostname == this.hostname
-      ) {
-        var target = $(this.hash);
-        target = target.length
-          ? target
-          : $("[name=" + this.hash.slice(1) + "]");
-        if (target.length) {
-          event.preventDefault();
-          $("html, body").animate(
-            {
-              scrollTop: target.offset().top,
-            },
-            1000,
-            function () {
-              var $target = $(target);
-              $target.focus();
-              if ($target.is(":focus")) {
-                return false;
-              } else {
-                $target.attr("tabindex", "-1");
-                $target.focus();
-              }
-            }
-          );
-        }
-      }
+  const smoothLinks = document.querySelectorAll('a[href^="#"]');
+  for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      const id = smoothLink.getAttribute("href");
+      document.querySelector(id).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     });
+  }
   // swiper init
 
   var swiper = new Swiper(".mySwiper1", {
@@ -120,10 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   var swiper = new Swiper(".mySwiper", {
-    // spaceBetween: 20,
     centeredSlides: true,
     autoplay: {
-      delay: 4000,
+      delay: 3500,
       disableOnInteraction: false,
     },
     pagination: {
@@ -132,12 +108,11 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
   // mobile menu
-  var nav = $("#mobile-menu"),
-    overlay = $(".overlay"),
-    menuToggle = $(".menu-button, .overlay");
-  menuToggle.on("click", function (e) {
-    e.preventDefault();
-    nav.toggleClass("open");
-    overlay.toggleClass("overlay-open");
-  });
+  const iconMenu = document.querySelector(".menu-button");
+  if (iconMenu) {
+    const menuNav = document.querySelector(".header__navigation");
+    iconMenu.addEventListener("click", function (e) {
+      menuNav.classList.toggle("active");
+    });
+  }
 });
